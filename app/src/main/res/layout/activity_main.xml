@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" First!"
+            android:id="@+id/first"
+            android:textSize="28sp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Second!"
+            android:id="@+id/second"
+            android:layout_alignParentRight="true"
+            android:textSize="28sp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Third!"
+            android:id="@+id/third"
+            android:layout_centerHorizontal="true"
+            android:textSize="28sp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Four!"
+            android:id="@+id/four"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="28sp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Five!"
+            android:layout_centerVertical="true"
+            android:id="@+id/five"
+            android:textSize="28sp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Six!"
+            android:id="@+id/six"
+            android:layout_centerInParent="true"
+            android:textSize="28sp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Seven!"
+            android:id="@+id/seven"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="28sp"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Eight!"
+            android:id="@+id/eight"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="28sp"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Nine!"
+            android:id="@+id/nine"
+            android:layout_alignParentBottom="true"
+            android:textSize="28sp"/>
+
+
+
+
+</RelativeLayout>
