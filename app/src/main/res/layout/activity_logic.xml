@@ -9,6 +9,7 @@
             android:layout_height="wrap_content"
             android:text=" First!"
             android:id="@+id/first"
+            android:textColor="@color/colorAccent"
             android:textSize="28sp"/>
 
     <TextView
@@ -81,47 +82,6 @@
             android:textSize="28sp"/>
 
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Ten!"
-            android:id="@+id/ten"
-            android:layout_below="@+id/five"
-            android:textSize="28sp"/>
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Eleven!"
-            android:id="@+id/eleven"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/six"
-            android:textSize="28sp"/>
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Twelve!"
-            android:id="@+id/Twelve"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/four"
-            android:textSize="28sp"/>
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Thirteen!"
-            android:id="@+id/thirteen"
-            android:layout_alignParentRight="true"
-            android:layout_above="@+id/seven"
-            android:textSize="28sp"/>
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Fourteen!"
-            android:id="@+id/fourteen"
-            android:layout_toEndOf="@+id/first"
-            android:textSize="20sp"/>
 
 </RelativeLayout>

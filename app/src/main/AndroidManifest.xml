@@ -10,14 +10,18 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".LinearRelativeLayoutsLecture.MainActivity">
+
         </activity>
-        <activity android:name=".RelativeActivity">
+        <activity android:name=".LinearRelativeLayoutsLecture.RelativeActivity">
+
         </activity>
-        <activity android:name=".LinearLayoutActivity">
+        <activity android:name=".LinearRelativeLayoutsLecture.LinearLayoutActivity">
+
+        </activity>
+        <activity android:name=".ActivityViewsWIthIds.LogicActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>

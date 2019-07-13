@@ -1,7 +1,8 @@
-package com.theta.androidkotlin
+package com.theta.androidkotlin.LinearRelativeLayoutsLecture
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.theta.androidkotlin.R
 
 class RelativeActivity : AppCompatActivity() {
 
