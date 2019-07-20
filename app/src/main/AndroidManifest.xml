@@ -19,11 +19,14 @@
         <activity android:name=".LinearRelativeLayoutsLecture.LinearLayoutActivity">
 
         </activity>
-        <activity android:name=".ActivityViewsWIthIds.LogicActivity">
+        <activity android:name="com.theta.LifeCylceAndIntent.IntentLifeCycleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".ActivityViewsWIthIds.LogicActivity">
+
         </activity>
 
 
