@@ -4,10 +4,37 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+    <EditText android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/editTextUserName"
+              android:hint="please enter your name"
+              android:layout_marginTop="20dp"
+              android:layout_alignParentLeft="true"
+              android:textSize="20sp"
+              android:paddingLeft="10dp"
+    />
+
+    <EditText android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/editTextAge"
+              android:inputType="number"
+              android:maxLength="3"
+              android:hint="please enter your age"
+              android:layout_marginTop="20dp"
+              android:layout_alignParentLeft="true"
+              android:textSize="20sp"
+              android:layout_below="@+id/editTextUserName"
+              android:paddingLeft="10dp"
+    />
+
+
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Click"
+            android:layout_below="@+id/editTextAge"
+            android:layout_marginTop="20dp"
             android:textColor="#ffffff"
             android:textSize="18sp"
             android:textStyle="bold"

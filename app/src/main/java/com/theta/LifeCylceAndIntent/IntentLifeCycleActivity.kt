@@ -2,12 +2,10 @@ package com.theta.LifeCylceAndIntent
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Debug
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.widget.Toast
 import android.view.Gravity
-import com.theta.androidkotlin.ActivityViewsWIthIds.LogicActivity
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_lifecycle.*
 
 
@@ -22,22 +20,53 @@ class IntentLifeCycleActivity : AppCompatActivity() {
         textLifeCycle.setText("OnCreate")
 
         buttonClick.setOnClickListener {
-            // INTENT
+            //Explicit INTENT vs Implicit Intent
+//Toast.makeText(this@IntentLifeCycleActivity,
+//    editTextUserName.text.toString(), Toast.LENGTH_LONG).show()
+            showExplicitIntent()
 
-            val intent = Intent(this, LogicActivity::class.java)
-          //  intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            startActivity(intent)
-            finish()
-
-
-//   public Intent intent = new Intent(this, LogicActivity.class)
-
-
+            //       showImplicitIntent()
 
 
         }
 
+
+    }
+
+    private fun showExplicitIntent() {
+        //1- Explicit INTENT
+        val explicitIntent = Intent(
+            this@IntentLifeCycleActivity,
+            Main2Activity::class.java
+        )
+
+        explicitIntent.putExtra(
+            Intent.EXTRA_TEXT
+            , editTextUserName.text.toString()
+        )
+
+        explicitIntent.putExtra(
+            "AGE"
+            , Integer.valueOf(editTextAge.text.toString())
+        )
+
+        //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        explicitIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(explicitIntent)
+        finish()
+    }
+
+    private fun showImplicitIntent() {
+        //Implicit Intent
+        val implicitIntent = Intent()
+        implicitIntent.action = Intent.ACTION_SEND
+        implicitIntent.putExtra(Intent.EXTRA_TEXT, "My Text")
+        implicitIntent.type = "text/plain"
+//            implicitIntent.type= "audio/*"
+//            implicitIntent.type= "video/*"
+//            implicitIntent.type= "application/*"
+        val intent = Intent.createChooser(implicitIntent, "Share Text With")
+        startActivity(intent)
 
     }
 
@@ -48,6 +77,7 @@ class IntentLifeCycleActivity : AppCompatActivity() {
         textLifeCycle.text = textLifeCycle.text.toString() + "\n onStart"
 
     }
+
     override fun onResume() {
         super.onResume()
         showToast("onResume")
@@ -60,6 +90,7 @@ class IntentLifeCycleActivity : AppCompatActivity() {
         //CALL
 
     }
+
     override fun onPause() {
 
         super.onPause()
@@ -68,12 +99,13 @@ class IntentLifeCycleActivity : AppCompatActivity() {
         textLifeCycle.text = textLifeCycle.text.toString() + "\n onPause"
 
         //    status = Status.Offline
-      //  if(Video ==ON) {
-            //Pause()
-      //  }
+        //  if(Video ==ON) {
+        //Pause()
+        //  }
         //CALL.DROP
 
     }
+
     override fun onStop() {
         super.onStop()
         showToast("onStop")
@@ -82,6 +114,7 @@ class IntentLifeCycleActivity : AppCompatActivity() {
 
 
     }
+
     override fun onDestroy() {
         super.onDestroy()
         showToast("onDestroy")
@@ -90,6 +123,7 @@ class IntentLifeCycleActivity : AppCompatActivity() {
 
 
     }
+
     override fun onRestart() {
         super.onRestart()
         showToast("onRestart")
@@ -99,6 +133,7 @@ class IntentLifeCycleActivity : AppCompatActivity() {
 
 
     }
+
     private fun showToast(text: String) {
         val toast = Toast.makeText(this, text, Toast.LENGTH_SHORT)
         toast.setGravity(Gravity.CENTER, 0, 0)
