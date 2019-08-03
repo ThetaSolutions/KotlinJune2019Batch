@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.Gravity
 import android.widget.Toast
+import com.theta.classes.Student
 import kotlinx.android.synthetic.main.activity_lifecycle.*
 
 
@@ -24,10 +25,7 @@ class IntentLifeCycleActivity : AppCompatActivity() {
 //Toast.makeText(this@IntentLifeCycleActivity,
 //    editTextUserName.text.toString(), Toast.LENGTH_LONG).show()
             showExplicitIntent()
-
-            //       showImplicitIntent()
-
-
+       //     showImplicitIntent()
         }
 
 
@@ -45,10 +43,23 @@ class IntentLifeCycleActivity : AppCompatActivity() {
             , editTextUserName.text.toString()
         )
 
+        explicitIntent.putExtra("PhoneNumber"
+            , "8979087"
+        )
+
+        explicitIntent.putExtra("BloodGroup"
+            , "0+"
+        )
+
         explicitIntent.putExtra(
             "AGE"
             , Integer.valueOf(editTextAge.text.toString())
         )
+
+        var student = Student(phoneNumber = 5243,name = editTextUserName.text.toString(),
+            height = 5.6f)
+
+        explicitIntent.putExtra("Student", student)
 
         //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         explicitIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)

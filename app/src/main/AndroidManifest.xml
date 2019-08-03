@@ -10,13 +10,33 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name="com.theta.LifeCylceAndIntent.Kotlin.KotlinActivity"
+                android:name="com.theta.LifeCylceAndIntent.ui.main.ScrollingActivity"
+                android:label="@string/title_activity_scrolling"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity
+                android:name="com.theta.LifeCylceAndIntent.ui.main.NavigationDrawerActivity"
+                android:label="@string/title_activity_navigation_drawer"
+                android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+                android:name="com.theta.LifeCylceAndIntent.ui.main.Main4Activity"
+                android:label="@string/title_activity_main4">
+        </activity>
+        <activity
+                android:name="com.theta.LifeCylceAndIntent.Main3Activity"
+                android:label="Main3"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name="com.theta.LifeCylceAndIntent.Kotlin.KotlinActivity"
+                android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
                 android:name="com.theta.LifeCylceAndIntent.Main2Activity"

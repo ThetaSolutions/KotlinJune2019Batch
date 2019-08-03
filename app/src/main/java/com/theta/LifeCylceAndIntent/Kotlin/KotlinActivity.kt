@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log
+import android.widget.Button
+import android.widget.ImageButton
 import com.theta.androidkotlin.R
 
 import kotlinx.android.synthetic.main.activity_kotlin.*
@@ -27,7 +29,97 @@ class KotlinActivity : AppCompatActivity() {
         convertDataTypes()
         mathOperators()
         incrementDecrement()
+        LoopsWithRange()
+        whenStatement()
+        objectNullSafety()
+
     }
+
+    private fun objectNullSafety() {
+        var loginButton: ImageButton? = null
+
+        loginButton?.getTag() // avoid null pointer exception
+
+//        public button = new Button()
+////        if (button != null) {
+////            button.getTag()
+////        }
+    }
+
+    private fun whenStatement() {
+        val count = 100
+
+        if (count > 100) {
+
+        } else if (count < 100) {
+
+        } else if (count == 100) {
+
+        } else if (count == 50) {
+            //
+        }
+
+        when (count) {
+            100 -> {
+            }
+            1000 -> {
+            }
+            50 -> {
+            }
+        }
+
+
+    }
+
+    private fun LoopsWithRange() {
+
+        //ArrayList
+        val studentsName = arrayListOf<String>()
+        studentsName.add("Jahangir")
+        studentsName.add("Salman")
+        studentsName.add("Ahmed")
+        studentsName.add("Ali")
+        studentsName.add("Umer")
+        studentsName.add("Zeeshan")
+
+
+        if (studentsName.contains("Salman")) {
+            //
+        } else if (studentsName.contains("Ali")) {
+            //
+        }
+
+
+
+        Log.d("LoopsWithRange", studentsName.size.toString())
+
+        //ForEach
+        studentsName.forEach {
+            Log.d("LoopsWithRange", it)
+        }
+
+        if (studentsName.contains("Salman")) {
+            Log.d("LoopsWithRange", "Salman Found")
+        }
+
+        val myList = List<Int>(10) { 100 }
+
+        for (studentCount in myList) {
+            Log.d("ForLoop", studentCount.toString())
+        }
+
+        //With Range
+
+        for (count in 5..10) {
+            Log.d("LoopInRange", count.toString())
+        }
+
+//        for(int i = 5; i <10; i++) {
+//
+//        }
+
+    }
+
     private fun incrementDecrement() {
         var a = 5
         var b = 6
@@ -35,20 +127,21 @@ class KotlinActivity : AppCompatActivity() {
         var result = 0
         result = a++ + b //12,16, -> 11 -> a= 6
         Log.d("incrementDecrement", result.toString())
-        result = a+++b // 11,12,-> 12 -> a = 7, b = 6
+        result = a++ + b // 11,12,-> 12 -> a = 7, b = 6
         Log.d("incrementDecrement", result.toString())
         Log.d("a", a.toString())
-        result = a-- -b // -2, -1, -3 -> 1; a=6, b= 6
+        result = a-- - b // -2, -1, -3 -> 1; a=6, b= 6
         Log.d("incrementDecrement", result.toString())
 
-        result = a---b //-1, -2, 0,-> a= 5, b = 6
+        result = a-- - b //-1, -2, 0,-> a= 5, b = 6
         Log.d("incrementDecrement", result.toString())
 
-        result = a++ -b // -1,
+        result = a++ - b // -1,
         Log.d("incrementDecrement", result.toString())
 
 
     }
+
     private fun mathOperators() {
         val a = 5
         val b = 10
@@ -59,7 +152,7 @@ class KotlinActivity : AppCompatActivity() {
 
         result = a * b // 50
         result = a / b // 0
-        result =  e % a // 2,
+        result = e % a // 2,
         result = a + b // 15
         Log.d("a / b", result.toString())
 
@@ -68,6 +161,7 @@ class KotlinActivity : AppCompatActivity() {
         Log.d("mathOperators", result.toString())
 
     }
+
     private fun convertDataTypes() {
         val age = "17"
 
@@ -78,13 +172,15 @@ class KotlinActivity : AppCompatActivity() {
         var phoneString = phone.toString() //Integer to String
 
     }
+
     private fun dataTypes() {
-        var name :String = ""
-        var age : Int = 5
-        var height : Double = 5.5
-        var depth: Float= 5.5f
+        var name: String = ""
+        var age: Int = 5
+        var height: Double = 5.5
+        var depth: Float = 5.5f
         var isMale: Boolean = true
     }
+
     private fun concatinationInKotlin() {
         val firstName = "Theta"
         val secondName = "Solutions"
@@ -96,20 +192,22 @@ class KotlinActivity : AppCompatActivity() {
         Log.d("concatinationInKotlin", "$firstName$age$secondName")
 
     }
+
     private fun varVsVal() {
         var name = "Theta" // Variable
         val nameInstitute = "Theta" //Always start with Val
 
         name = "Theta Solutions"
-      //  nameInstitute = "Theta SOlutions" //Not possible
+        //  nameInstitute = "Theta SOlutions" //Not possible
 
         name = ""
         name = "adfgadsg"
-        name ="asdg3563456"
+        name = "asdg3563456"
 
         val DOB = "11/11/1990"
 
     }
+
     private fun kotlinVariables() {
 
         var age = 5    //Auto
@@ -128,7 +226,7 @@ class KotlinActivity : AppCompatActivity() {
         var name2: String? = "Theta Solutions"
 
         var name3 = ""
-    //    name2 = null // possible
+        //    name2 = null // possible
 
         //  name1 = null //not possible
 
