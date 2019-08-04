@@ -10,9 +10,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name="com.theta.LifeCylceAndIntent.ui.main.ScrollingActivity"
-                android:label="@string/title_activity_scrolling"
-                android:theme="@style/AppTheme.NoActionBar">
+                android:name="com.theta.fragments.BottomNavigationActivity"
+                android:label="@string/title_activity_bottom_navigation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -20,10 +19,14 @@
             </intent-filter>
         </activity>
         <activity
+                android:name="com.theta.LifeCylceAndIntent.ui.main.ScrollingActivity"
+                android:label="@string/title_activity_scrolling"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
                 android:name="com.theta.LifeCylceAndIntent.ui.main.NavigationDrawerActivity"
                 android:label="@string/title_activity_navigation_drawer"
                 android:theme="@style/AppTheme.NoActionBar">
-
         </activity>
         <activity
                 android:name="com.theta.LifeCylceAndIntent.ui.main.Main4Activity"
