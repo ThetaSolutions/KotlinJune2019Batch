@@ -57,7 +57,7 @@ class IntentLifeCycleActivity : AppCompatActivity() {
         )
 
         var student = Student(phoneNumber = 5243,name = editTextUserName.text.toString(),
-            height = 5.6f)
+            height = 5.6f,lastName = "")
 
         explicitIntent.putExtra("Student", student)
 

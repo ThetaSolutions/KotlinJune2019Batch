@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.theta.androidkotlin.R
+import com.theta.sharedPreferences.SharedPrefs
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -37,6 +38,15 @@ class MainActivity : AppCompatActivity() {
 
         seven.setOnClickListener {
             seven.text = "Seven"
+
+
+            //Shared Prefs
+            val thetaPrefs = "com.theta.androidkotlin.prefs"
+            val sharedPrefs = getSharedPreferences(thetaPrefs, 0)
+            sharedPrefs.edit().putString("ButtonSeven", seven.text.toString()).commit()
+
+           val valueFromSharedPrefs= sharedPrefs.getString("ButtonSeven","")
+
         }
 
 
