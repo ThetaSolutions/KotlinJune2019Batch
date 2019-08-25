@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.theta.androidkotlin">
+        package="com.theta.androidkotlin">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
             android:allowBackup="true"
@@ -9,62 +10,56 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name="com.theta.RecyclerView.RecyclerViewActivity">
+        <activity android:name="com.theta.splash.SplashActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.theta.RecyclerView.RecyclerViewActivity">
         </activity>
         <activity
                 android:name="com.theta.fragments.BottomNavigationActivity"
                 android:label="@string/title_activity_bottom_navigation">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity
                 android:name="com.theta.LifeCylceAndIntent.ui.main.ScrollingActivity"
                 android:label="@string/title_activity_scrolling"
-                android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+                android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
                 android:name="com.theta.LifeCylceAndIntent.ui.main.NavigationDrawerActivity"
                 android:label="@string/title_activity_navigation_drawer"
-                android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+                android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
                 android:name="com.theta.LifeCylceAndIntent.ui.main.Main4Activity"
-                android:label="@string/title_activity_main4">
-        </activity>
+                android:label="@string/title_activity_main4"></activity>
         <activity
                 android:name="com.theta.LifeCylceAndIntent.Main3Activity"
                 android:label="Main3"
-                android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+                android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
                 android:name="com.theta.LifeCylceAndIntent.Kotlin.KotlinActivity"
-                android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+                android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
                 android:name="com.theta.LifeCylceAndIntent.Main2Activity"
                 android:label="@string/title_activity_main2"
-                android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity android:name="com.theta.LifeCylceAndIntent.WelcomeActivity">
-        </activity>
-        <activity android:name=".LinearRelativeLayoutsLecture.MainActivity">
-        </activity>
-        <activity android:name=".LinearRelativeLayoutsLecture.RelativeActivity">
-        </activity>
-        <activity android:name=".LinearRelativeLayoutsLecture.LinearLayoutActivity">
-        </activity>
-        <activity android:name="com.theta.LifeCylceAndIntent.IntentLifeCycleActivity">
-        </activity>
-        <activity android:name=".ActivityViewsWIthIds.LogicActivity">
-        </activity>
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name="com.theta.LifeCylceAndIntent.WelcomeActivity"></activity>
+        <activity android:name=".LinearRelativeLayoutsLecture.MainActivity"></activity>
+        <activity android:name=".LinearRelativeLayoutsLecture.RelativeActivity"></activity>
+        <activity android:name=".LinearRelativeLayoutsLecture.LinearLayoutActivity"></activity>
+        <activity android:name="com.theta.LifeCylceAndIntent.IntentLifeCycleActivity"></activity>
+        <activity android:name=".ActivityViewsWIthIds.LogicActivity"></activity>
+
+
+        <activity
+                android:name="com.andremion.louvre.home.GalleryActivity"
+                android:theme="@style/AppTheme.Louvre.Dark" />
+        <activity
+                android:name="com.andremion.louvre.preview.PreviewActivity"
+                android:theme="@style/AppTheme.Louvre.Preview" />
     </application>
 
 </manifest>
