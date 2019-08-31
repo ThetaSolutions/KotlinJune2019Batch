@@ -3,7 +3,6 @@ package com.theta.splash
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.os.RecoverySystem
 import android.support.v7.app.AppCompatActivity
 import com.theta.RecyclerView.RecyclerViewActivity
 import com.theta.androidkotlin.LinearRelativeLayoutsLecture.MainActivity
@@ -11,7 +10,7 @@ import com.theta.androidkotlin.R
 
 class SplashActivity : AppCompatActivity() {
 
-    private val SPLASH_DELAY:Long = 3000 //3 Seconds
+    private val SPLASH_DELAY:Long = 1000 //3 Seconds
     private var mDelayedHandler: Handler? = null
 
 
@@ -24,9 +23,10 @@ class SplashActivity : AppCompatActivity() {
     }
 
     val mRunnable:Runnable = Runnable {
-     //........
+     //...
         val intent = Intent(this@SplashActivity,
-            MainActivity::class.java)
+            RecyclerViewActivity::class.java)
         startActivity(intent)
     }
+
 }
