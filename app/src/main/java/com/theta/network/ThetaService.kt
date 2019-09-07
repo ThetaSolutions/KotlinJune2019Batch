@@ -11,12 +11,11 @@ import retrofit2.http.GET
 interface ThetaService {
 
 
-       @GET("AllStudentsList")
-    fun getAllStudents():Call<StudentResponse>
+    @GET("AllStudentsList")
+    fun getAllStudents():Call<List<MyStudent>>
 
 //    @GET("Login")
 //    fun loginUser():Call<LoginResponse>
-
 
     // http://thetakotlin.azurewebsites.net/Home/AllStudentsList
     companion object {

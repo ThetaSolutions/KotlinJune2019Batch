@@ -2,10 +2,7 @@ package com.theta.network
 
 import com.google.gson.annotations.SerializedName
 
-class StudentResponse {
-
-    val studentList : List<MyStudent>? = null
-}
+data class StudentResponse(val studentList : MyStudent? = null)
 
 class MyStudent {
 

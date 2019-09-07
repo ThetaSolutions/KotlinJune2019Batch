@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        android:elevation="20dp"
+        android:layout_margin="10dp">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:context="com.theta.RecyclerView.RecyclerViewActivity">
+
+        <TextView
+                android:id="@+id/my_student_name"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="8dp"
+                android:text="Salman"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp" />
+
+        <TextView
+                android:id="@+id/my_student_phoneNumber"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="8dp"
+                android:text="0900"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp" />
+
+        <TextView
+                android:id="@+id/my_student_email"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/my_student_name"
+                android:layout_marginStart="8dp"
+                android:text="abc@gmail.com"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp" />
+
+
+        <TextView
+                android:id="@+id/my_student_training"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/my_student_phoneNumber"
+                android:layout_marginStart="8dp"
+                android:text="Android"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
